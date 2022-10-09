@@ -15,9 +15,7 @@ The application starts with a list of menu items, which you can delete and edit.
 
 
 
-![image](https://user-images.githubusercontent.com/114822178/194780991-62fa2d2c-8787-469a-b5e9-fcaf700fb0f9.png)
-
-![image](https://user-images.githubusercontent.com/114822178/194781105-c76702dd-3011-4154-a7f6-1258b053b26c.png)
+![image](https://user-images.githubusercontent.com/114822178/194780991-62fa2d2c-8787-469a-b5e9-fcaf700fb0f9.png)![image](https://user-images.githubusercontent.com/114822178/194781105-c76702dd-3011-4154-a7f6-1258b053b26c.png)
 
 If we click on the '+' button we can create a new dish that will appear in the list.
 
