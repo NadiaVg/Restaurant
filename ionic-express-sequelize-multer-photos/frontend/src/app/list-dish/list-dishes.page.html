@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Dish List</ion-title>
+  </ion-toolbar>
+  <ion-searchbar icon="search-outline" [(ngModel)]="searchDish" showCancelButton="focus" animated
+        placeholder="Search..."></ion-searchbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="container-card">
+    <ion-item *ngFor="let d of dishes | filter:searchDish">
+      <ion-card class="card">
+        <ion-card-header>
+          <ion-item>
+            <img src="http://localhost:8080/images/{{d.filename}}" alt="image"/>
+          </ion-item>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-card-title class="ion-text-wrap">
+            {{ d.name }}
+          </ion-card-title>
+          <ion-card-subtitle class="ion-text-wrap">
+            {{ d.category }}
+          </ion-card-subtitle>
+          <ion-card-title class="ion-text-wrap">
+            {{ d.price }} €
+          </ion-card-title>
+        </ion-card-content>
+      </ion-card>
+      <ion-grid>
+        <ion-row>
+          <div class="item-note" item-end class="button">
+            <ion-button routerLink="/update/{{d.id}}" color="dark">
+              <ion-icon name="create-outline" style="zoom:1.5"></ion-icon>
+            </ion-button>
+          </div>
+        </ion-row>
+        <ion-row>
+          <div class="item-note" item-end class="button">
+  
+            <ion-button clear (click)="removeDish(d)" color="dark">
+              <ion-icon name="trash-outline" style="zoom:1.5"></ion-icon>
+            </ion-button>
+          </div>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+   
+  </ion-list>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addDish()">
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
